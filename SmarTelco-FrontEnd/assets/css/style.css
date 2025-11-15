@@ -1,0 +1,402 @@
+/* SmartTelco-FrontEnd/assets/css/style.css */
+:root {
+    --primary-color: #007bff; /* Biru Telco */
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --card-color: #ffffff;
+    --text-color: #343a40;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+}
+.navbar nav a:hover, .navbar nav a.active {
+    color: #ffc107; /* Warna kuning sebagai highlight */
+}
+
+/* Container & Cards */
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.card {
+    background-color: var(--card-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+.card h2, .card h3 {
+    color: var(--primary-color);
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Form Layout */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+.form-group input:not([type="range"]), .form-group select {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Input Range (Slider) Customization */
+.slider-group {
+    position: relative;
+}
+.value-display {
+    display: block;
+    text-align: right;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+/* Tombol */
+.btn-primary, .btn-submit {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn-primary:hover, .btn-submit:hover {
+    background-color: #0056b3;
+}
+.btn-submit {
+    width: 100%;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Login Group */
+.login-simulation .input-group {
+    display: flex;
+    gap: 0.5rem;
+}
+.login-simulation .input-group input {
+    flex-grow: 1;
+}
+.status-text {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #28a745; /* Success color */
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #e9ecef;
+    color: var(--secondary-color);
+    margin-top: 2rem;
+}
+
+/* --- Penyesuaian Style untuk Result.html --- */
+
+.primary-result {
+    border: 3px solid var(--primary-color); /* Border menonjol untuk hasil utama */
+    text-align: center;
+}
+
+.result-header {
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #ffc107; /* Warna kuning */
+    color: var(--text-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+#offer-name {
+    font-size: 2.5rem;
+    color: #dc3545; /* Warna kontras untuk nama penawaran */
+    margin: 0.5rem 0;
+}
+
+.offer-details {
+    text-align: left;
+    margin-top: 2rem;
+}
+.offer-details h3 {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.8rem;
+}
+
+/* Facts Grid untuk ringkasan profil */
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #e9ecef;
+    border-radius: 6px;
+}
+.fact-item span {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Alternative Results */
+.alternatives-grid {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.alternative-card {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    flex: 1 1 250px; /* Fleksibel untuk tampilan di berbagai ukuran */
+    min-width: 200px;
+    text-align: center;
+}
+.alternative-card h4 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.alt-prob {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Call to Action */
+.cta-section {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+}
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.cta-section .btn-primary {
+    background-color: white;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+}
+.cta-section .btn-primary:hover {
+    background-color: #eee;
+}
+
+/* --- Style Tambahan index.html --- */
+
+.hero-section {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    color: white; /* Override card h2/h3 styling */
+    border-bottom: none;
+}
+.hero-section .subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+.hero-section .btn-submit {
+    background-color: #ffc107; /* Warna kontras */
+    color: var(--text-color);
+    font-weight: bold;
+    padding: 0.8rem 3rem;
+    font-size: 1.2rem;
+}
+.hero-section .btn-submit:hover {
+    background-color: #e0a800;
+}
+
+.features-section {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.features-section h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.feature-card {
+    background-color: var(--card-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+.feature-card h3 {
+    color: var(--primary-color);
+    border-bottom: none;
+    font-size: 1.3rem;
+}
+
+.footer-cta {
+    background-color: #e9ecef;
+    text-align: center;
+}
+.footer-cta h3 {
+    color: var(--text-color);
+    border-bottom: none;
+}
+
+/* --- Style Tambahan admin.html --- */
+
+/* Warna untuk Kotak Metrik */
+.success-bg { background-color: #28a745; color: white; }
+.primary-bg { background-color: var(--primary-color); color: white; }
+.warning-bg { background-color: #ffc107; color: var(--text-color); }
+.info-bg { background-color: #17a2b8; color: white; }
+.danger-bg { background-color: #dc3545; color: white; }
+
+/* Metrics Grid */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.metric-box {
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.metric-box h4 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: inherit;
+    border-bottom: none;
+}
+.metric-value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0;
+}
+.last-update {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px dashed #ced4da;
+}
+
+/* Feature Importance Chart Simulation */
+.chart-container {
+    padding: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+}
+.bar-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.bar-item .label {
+    width: 150px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+.bar {
+    height: 20px;
+    margin: 0 10px;
+    border-radius: 4px;
+    transition: width 0.5s ease-out;
+}
+.bar-item .percent {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Model Management */
+.model-action-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+.model-action-group input[type="file"] {
+    flex-grow: 1;
+    border: 1px solid #ced4da;
+    padding: 0.6rem;
+    border-radius: 4px;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn-danger:hover {
+    background-color: #c82333;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTelco: Simulasi Rekomendasi</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">SmartTelco AI Recommender</a>
+        <nav>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card login-simulation">
+            <h2>Simulasi Rekomendasi Paket</h2>
+            <h3>1. Login Cepat (Ambil Data Historis)</h3>
+            <div class="input-group">
+                <input type="text" id="customer-id" placeholder="Masukkan Customer ID (misal: C00001)">
+                <button onclick="loadCustomerProfile()" class="btn-primary">Cari & Isi Profil</button>
+            </div>
+            <p id="profile-status" class="status-text"></p>
+        </section>
+
+        <form id="recommendation-form" class="card">
+            <h3>2. Atau Input Data Manual:</h3>
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="plan_type">Jenis Paket:</label>
+                    <select id="plan_type" required>
+                        <option value="Prepaid">Prepaid</option>
+                        <option value="Postpaid">Postpaid</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="device_brand">Merek Perangkat:</label>
+                    <select id="device_brand" required>
+                        <option value="Apple">Apple</option>
+                        <option value="Samsung">Samsung</option>
+                        <option value="Xiaomi">Xiaomi</option>
+                        <option value="Oppo">Oppo</option>
+                        <option value="Vivo">Vivo</option>
+                        <option value="Realme">Realme</option>
+                        <option value="Huawei">Huawei</option>
+                        <option value="Nokia">Nokia</option>
+                        <option value="Lenovo">Lenovo</option>
+                        <option value="ZTE">ZTE</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+
+                <div class="form-group slider-group">
+                    <label for="avg_data_usage_gb">Penggunaan Data (GB):</label>
+                    <input type="range" id="avg_data_usage_gb" min="0" max="25" step="0.1" value="5.0" required>
+                    <span id="data-value" class="value-display">5.0 GB</span>
+                </div>
+                
+                <div class="form-group slider-group">
+                    <label for="monthly_spend">Pengeluaran Bulanan (Rp 000):</label>
+                    <input type="range" id="monthly_spend" min="50" max="250" step="10" value="100" required>
+                    <span id="spend-value" class="value-display">Rp 100.000</span>
+                </div>
+
+                <div class="form-group slider-group">
+                    <label for="pct_video_usage">% Penggunaan Video:</label>
+                    <input type="range" id="pct_video_usage" min="0" max="1" step="0.01" value="0.5" required>
+                    <span id="video-value" class="value-display">50%</span>
+                </div>
+
+                <div class="form-group slider-group">
+                    <label for="avg_call_duration">Durasi Panggilan Rata-rata (Mins):</label>
+                    <input type="range" id="avg_call_duration" min="0" max="30" step="0.5" value="10.0" required>
+                    <span id="call-value" class="value-display">10.0 Min</span>
+                </div>
+                
+                <div class="form-group slider-group">
+                    <label for="sms_freq">Frekuensi SMS (per Bulan):</label>
+                    <input type="range" id="sms_freq" min="0" max="30" step="1" value="15" required>
+                    <span id="sms-value" class="value-display">15</span>
+                </div>
+                
+                <div class="form-group slider-group">
+                    <label for="topup_freq">Frekuensi Top-up (per Bulan):</label>
+                    <input type="range" id="topup_freq" min="0" max="10" step="1" value="5" required>
+                    <span id="topup-value" class="value-display">5x</span>
+                </div>
+                
+                <div class="form-group slider-group">
+                    <label for="travel_score">Travel Score (0.0 - 1.0):</label>
+                    <input type="range" id="travel_score" min="0" max="1" step="0.01" value="0.5" required>
+                    <span id="travel-value" class="value-display">0.50</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="complaint_count">Jumlah Keluhan (Tahun Terakhir):</label>
+                    <input type="number" id="complaint_count" min="0" max="5" value="0" required>
+                </div>
+
+            </div> <button type="submit" class="btn-submit">DAPATKAN REKOMENDASI TERBAIK</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 SmartTelco ML Recommender System</p>
+    </footer>
+
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/script.js"></script> 
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTelco: Dashboard Admin ML</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">SmartTelco AI Recommender</a>
+        <nav>
+        </nav>
+    </header>
+   
+    <main class="container">
+        <h2>🛠️ Dashboard Transparansi Model XGBoost</h2>
+        <p class="subtitle">Monitor kinerja model, identifikasi faktor pendorong rekomendasi (Feature Importance), dan kelola aset ML.</p>
+        
+        <section class="card performance-metrics">
+            <h3>Metrik Kinerja (Validasi Data)</h3>
+            <div class="metrics-grid">
+                <div class="metric-box success-bg">
+                    <h4>Accuracy Score</h4>
+                    <p class="metric-value">91.75%</p>
+                </div>
+                <div class="metric-box primary-bg">
+                    <h4>Macro F1-Score</h4>
+                    <p class="metric-value">88.52%</p>
+                </div>
+                <div class="metric-box warning-bg">
+                    <h4>Log Loss</h4>
+                    <p class="metric-value">0.245</p>
+                </div>
+                <div class="metric-box info-bg">
+                    <h4>Latency Prediksi</h4>
+                    <p class="metric-value">~15ms</p>
+                </div>
+            </div>
+            <p class="last-update">Model Aktif: **xgboost_smote_telco.pkl** (Versi 1.0, Dilatih 1 Nov 2025)</p>
+        </section>
+
+        <section class="card feature-transparency">
+            <h3>Faktor Pendorong Rekomendasi (Feature Importance)</h3>
+            <p>Fitur-fitur ini paling berpengaruh dalam memprediksi **Target Offer**.</p>
+            
+            <div id="feature-importance-chart" class="chart-container">
+                <div class="bar-item">
+                    <span class="label">Monthly Spend</span>
+                    <div class="bar primary-bg" style="width: 95%;"></div>
+                    <span class="percent">95</span>
+                </div>
+                <div class="bar-item">
+                    <span class="label">Avg Data Usage (GB)</span>
+                    <div class="bar success-bg" style="width: 80%;"></div>
+                    <span class="percent">80</span>
+                </div>
+                <div class="bar-item">
+                    <span class="label">Complaint Count</span>
+                    <div class="bar danger-bg" style="width: 72%;"></div>
+                    <span class="percent">72</span>
+                </div>
+                <div class="bar-item">
+                    <span class="label">% Video Usage</span>
+                    <div class="bar warning-bg" style="width: 55%;"></div>
+                    <span class="percent">55</span>
+                </div>
+                <div class="bar-item">
+                    <span class="label">Travel Score</span>
+                    <div class="bar info-bg" style="width: 45%;"></div>
+                    <span class="percent">45</span>
+                </div>
+                </div>
+        </section>
+        
+        <section class="card model-management">
+            <h3>Manajemen Aset ML</h3>
+            <p>Simulasi *deployment* dan penggantian model secara *over-the-air*.</p>
+            <div class="model-action-group">
+                <input type="file" id="model-upload" accept=".pkl">
+                <button class="btn-primary" onclick="alert('Simulasi: Model Baru Berhasil Di-Deploy!');">Deploy Model Baru</button>
+                <button class="btn-danger" onclick="alert('Simulasi: Model XGBoost Saat Ini Di-Rollback ke Versi Lama.');">Rollback Model</button>
+            </div>
+        </section>
+
+    </main>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/script.js"></script> 
+    <script src="assets/js/result.js"></script>
+
+    <footer class="footer">
+        <p>&copy; 2025 SmartTelco ML Recommender System. Admin Access.</p>
+    </footer>
+</body>
+</html>
