@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTelco: Hasil Rekomendasi</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">SmartTelco AI Recommender</a>
+        <nav>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>✨ Rekomendasi Paket Terbaik Untuk Anda!</h2>
+        
+        <section id="main-recommendation" class="card primary-result">
+            <div class="result-header">
+                <span class="badge">REKOMENDASI EKSKLUSIF</span>
+                <h1 id="offer-name">Memuat...</h1>
+                <p>Tingkat Kepercayaan Model: <strong id="confidence-score">0.0%</strong></p>
+            </div>
+            <div class="offer-details">
+                <h3>Mengapa Penawaran Ini Direkomendasikan?</h3>
+                <p id="offer-reason">Berdasarkan analisis mendalam terhadap perilaku Anda, paket ini menawarkan nilai terbaik.</p>
+                <div id="summary-facts" class="facts-grid">
+                    </div>
+            </div>
+        </section>
+
+        <section id="alternative-recommendations" class="card alternative-results">
+            <h3>Opsi Alternatif (Rekomendasi Probabilitas Tinggi Lainnya)</h3>
+            <div id="alternatives-list" class="alternatives-grid">
+                <p>Tidak ada alternatif dengan probabilitas tinggi.</p>
+            </div>
+        </section>
+
+        <section class="card cta-section">
+            <p>Tertarik dengan rekomendasi ini? Hubungi layanan pelanggan kami atau simulasikan profil lain!</p>
+            <a href="data_input.html" class="btn-primary">Simulasikan Profil Baru</a>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 SmartTelco ML Recommender System</p>
+    </footer>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/script.js"></script> 
+    <script src="assets/js/result.js"></script>
+</body>
+</html>

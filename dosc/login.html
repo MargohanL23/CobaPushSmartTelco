@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTelco: Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">SmartTelco AI Recommender</a>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <main class="container login-container">
+        <section class="card login-card">
+            <h2>Masuk ke Sistem Rekomendasi</h2>
+            <p class="subtitle">Silakan pilih peran Anda untuk melanjutkan.</p>
+            
+            <div id="login-form">
+                <label for="login-id">Masukkan User/Admin ID:</label>
+                <input type="text" id="login-id" name="login-id" placeholder="Contoh: C00001 atau A00001" required>
+                
+                <button type="button" class="btn-primary" onclick="handleLogin()">Masuk</button>
+
+                <p class="separator">atau</p>
+
+                <button type="button" class="btn-submit" onclick="handleNewUser()">Daftar (Buat ID Pelanggan Baru)</button>
+            </div>
+            
+            <p id="login-message" class="text-muted"></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 SmartTelco ML Recommender System</p>
+    </footer>
+
+    <script src="assets/js/login.js"></script>
+</body>
+</html>
